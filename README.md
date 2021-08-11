@@ -3,6 +3,8 @@ Project to manage code for kudratt.ca
 
 # Table of Contents
 
+- [Directory Structure](#directory-structure)
+
 
 ## Directory Stucture
 
@@ -16,12 +18,10 @@ Project to manage code for kudratt.ca
 - [Makefile](Makefile)
 - [main.py](main.py)
 
-##  Project Requirements
 
+### Product schema
 
-### Product Model
-
-- Product Information
+- Product Metadata
   - [ ] Product Name
   - [ ] Product Description
   - [ ] Product URL
@@ -39,9 +39,3 @@ Project to manage code for kudratt.ca
   - [ ] Product Material information
   - [ ] Product Material weight
   - [ ] Product Reviews (List)
-
-
-
-
-
-
