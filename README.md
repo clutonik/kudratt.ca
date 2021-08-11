@@ -18,7 +18,7 @@ Project to manage code for kudratt.ca
   - [xml](designs/xml)
   - [img](designs/img)
 - [Makefile](Makefile)
-- [main.py](main.py)
+- [main.py](app/main.py)
 
 
 ### Product schema
