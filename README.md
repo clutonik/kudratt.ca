@@ -15,6 +15,8 @@ Project to manage code for kudratt.ca
   - [static](app/static)
   - [tests](app/tests)
 - [designs](designs)
+  - [xml](designs/xml)
+  - [img](designs/img)
 - [Makefile](Makefile)
 - [main.py](main.py)
 
