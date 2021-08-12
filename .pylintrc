@@ -1,0 +1,3 @@
+[MASTER]
+
+ignore-patterns = *.pyc, __init__.py
