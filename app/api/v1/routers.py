@@ -1,3 +1,8 @@
+"""
+Module to hold all API endpoints in a single FastAPI.APIRouter instance.
+
+"""
+
 from fastapi import APIRouter
 from app.api.v1.endpoints import general, products
 
