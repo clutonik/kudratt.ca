@@ -1,4 +1,3 @@
-
 import logging
 from botocore.exceptions import ClientError
 import boto3
@@ -18,6 +17,7 @@ class S3Events(object):
             aws_access_key_id=self.aws_access_key_id,
             aws_secret_access_key=self.aws_secret_access_key,
         )
+        self.aws_region=AWS_REGION
         self.s3 = self.session.resource('s3')
 
     def sync_upload_fileobj(self, file_name=None, bucket=None, key=None):
@@ -37,10 +37,11 @@ class S3Events(object):
         # Upload the file
         s3_client = boto3.client('s3')
         try:
-            response = s3_client.upload_fileobj(file_name, bucket, key, ExtraArgs={'ACL': 'public-read'})
-        except ClientError as e:
+            response = s3_client.upload_fileobj(file_name, bucket, key,
+                                         ExtraArgs={'ACL': 'public-read'})
+        except ClientError as exception:
             logging.info("INFO: Failed to upload image")
-            logging.error(e)
+            logging.error(exception)
             return False
 
         logging.info("File object uploaded to https://s3.amazonaws.com/{}{}".format( bucket, key))
@@ -56,6 +57,6 @@ class S3Events(object):
             logger.info(file_path)
             s3_client.delete_object(Bucket=bucket_name,Key=file_path)
             return True
-        except Exception as e:
-            logging.error(e)
+        except Exception as exception:
+            logging.error(exception)
             return False
