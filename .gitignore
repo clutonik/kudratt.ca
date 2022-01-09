@@ -8,3 +8,4 @@ secrets.tfvars
 *.tfstate
 *.tfstate.backup
 *.tf.IN-PROGRESS
+node_modules
